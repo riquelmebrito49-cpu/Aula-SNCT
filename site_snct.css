@@ -1,0 +1,126 @@
+:root {
+  --roxo: #7b2cbf;
+  --ambar: #f5a300;
+  --fundo: #faf7fc;
+  --card: #fff;
+  --texto: #241a33;
+  --suave: #6b6478;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+header {
+  padding: 28px 16px;
+  text-align: center;
+  background: #4a1d8c;
+  color: #fff;
+}
+
+/* Estilo para alinhar e limitar o tamanho das logos no cabeçalho */
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.logo-img {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+header h1 { margin: 0; }
+header p { margin: 4px 0 0; opacity: .85; }
+
+.linha {
+  max-width: 680px;
+  margin: 24px auto;
+  padding: 0 16px 0 28px;
+  border-left: 4px solid var(--ambar);
+}
+
+.card {
+  background: var(--card);
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  border-radius: 14px; /* Borda arredondada dos cartões */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .12);
+  cursor: pointer;
+}
+
+.card:hover {
+  outline: 2px solid var(--roxo);
+}
+
+.card time {
+  color: var(--roxo);
+  font-weight: bold;
+}
+
+.card h2 {
+  margin: 2px 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 4px 0 0;
+  color: var(--suave);
+  font-size: .92rem;
+}
+
+dialog {
+  max-width: 480px;
+  width: 92%;
+  border: 0;
+  border-radius: 18px; /* Borda arredondada da caixa de detalhes */
+  padding: 22px;
+  background: var(--card);
+  color: var(--texto);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, .6);
+}
+
+dialog button {
+  margin-top: 10px;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 22px;
+  background: var(--roxo);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--suave);
+  font-size: .85rem;
+}
+/* Organiza o layout do cartão para colocar a foto ao lado do texto */
+.card-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Deixa a foto redonda, com tamanho fixo e bem ajustada */
+.foto-cientista {
+  width: 60px;
+  height: 60px;
+  object-fit: cover; /* Garante que a foto não distorça */
+  border-radius: 50%; /* Transforma a foto em um círculo perfeito! */
+  border: 2px solid var(--roxo);
+}
